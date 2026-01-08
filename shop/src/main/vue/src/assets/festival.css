@@ -1,0 +1,100 @@
+/* 过年风格全局样式 */
+
+/* 红色主题色彩 */
+:root {
+  --festival-red: #c41e3a;
+  --festival-red-light: #e74c3c;
+  --festival-red-dark: #a01a2e;
+  --festival-gold: #ffd700;
+  --festival-bg: #fff5f5;
+  --festival-bg-light: #ffe8e8;
+}
+
+/* 全局动画 */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+/* Element UI 按钮样式覆盖 */
+.el-button--danger {
+  background-color: var(--festival-red);
+  border-color: var(--festival-red);
+}
+
+.el-button--danger:hover,
+.el-button--danger:focus {
+  background-color: var(--festival-red-light);
+  border-color: var(--festival-red-light);
+}
+
+/* Element UI 标签样式 */
+.el-tag--success {
+  background-color: #67c23a;
+  border-color: #67c23a;
+  color: #fff;
+}
+
+.el-tag--danger {
+  background-color: #f56c6c;
+  border-color: #f56c6c;
+  color: #fff;
+}
+
+/* Element UI 输入框焦点样式 */
+.el-input__inner:focus {
+  border-color: var(--festival-red);
+}
+
+.el-textarea__inner:focus {
+  border-color: var(--festival-red);
+}
+
+/* Element UI 单选框选中样式 */
+.el-radio__input.is-checked .el-radio__inner {
+  background-color: var(--festival-red);
+  border-color: var(--festival-red);
+}
+
+.el-radio__input.is-checked + .el-radio__label {
+  color: var(--festival-red);
+}
+
+/* Element UI 下拉框选中样式 */
+.el-select-dropdown__item.selected {
+  color: var(--festival-red);
+  font-weight: bold;
+}
+
+/* 滚动条样式 */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--festival-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--festival-red);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--festival-red-light);
+}
+
